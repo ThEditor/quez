@@ -2,7 +2,8 @@ import { type Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
 
 export default {
-  content: ["./src/**/*.tsx"],
+  presets: [require("@medusajs/ui-preset")],
+  content: ["./src/**/*.tsx", "./node_modules/@medusajs/ui/dist/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       fontFamily: {
