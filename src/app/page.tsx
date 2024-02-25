@@ -1,9 +1,9 @@
+import SignInButton from "~/components/signinbutton";
+
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center">
-      <div className="flex flex-col items-center justify-center gap-12 ">
-        Hi
-      </div>
-    </main>
+    <div>
+      <SignInButton />
+    </div>
   );
 }
