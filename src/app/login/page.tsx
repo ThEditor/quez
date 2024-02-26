@@ -1,12 +1,12 @@
 import { redirect } from "next/navigation";
-import SignInButton from "~/components/signinbutton";
+import SignInButton from "~/components/SignInButton";
 import { getServerAuthSession } from "~/server/auth";
 
 export default async function LoginPage() {
   const session = await getServerAuthSession();
   
   if (session?.user) {
-    redirect("/");
+    redirect(session.user.role ? "/" : "/role");
   }
   
   return (
